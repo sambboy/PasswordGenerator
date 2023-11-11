@@ -157,7 +157,7 @@ function Password() {
   const strengthValue = passwordStrength();
 
   return (
-    <div className="flex flex-col items-center justify-center h-screen ">
+    <div className="flex flex-col items-center justify-center h-screen p-6">
       <div className="w-full md:w-2/3 lg:w-1/2 xl:w-1/3 py-8">
         <h1 className="text-2xl text-center text-gray-darker">
           Password Generator
