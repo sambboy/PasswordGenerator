@@ -1,0 +1,48 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
+body {
+    @apply font-jetBrains leading-6 font-normal bg-mainBg-darker 
+}
+.progress {
+    @apply bg-mainBg-darker rounded-lg h-2 w-full outline-none appearance-none
+}
+.progress::-webkit-slider-thumb {
+    @apply w-5 h-5 rounded-full appearance-none cursor-pointer bg-gray-dark border-2 border-green
+}
+.input-check {
+    @apply hidden;
+}
+  
+.label-check:before {
+    @apply content-[''] appearance-none bg-transparent border-2 border-gray-dark p-2 inline-block relative align-middle cursor-pointer mr-3 transition-all;
+}
+  
+.label-check:hover:before,
+.input-check:checked + label:before {
+    @apply bg-green border-gray-darker;
+}
+  
+.input-check:checked + label:after {
+    @apply content-[''] block absolute top-1 left-1.5 w-2 h-3 border-r-2 border-b-2 border-gray-darker rotate-45;
+}
+
+
+
+.bar {
+    @apply border-2 border-white w-3 h-8;
+  }
+  .bar.v-weak {
+    @apply border-red bg-red;
+  }
+  .bar.weak {
+    @apply border-orange bg-orange;
+  }
+  .bar.medium {
+    @apply border-yellow bg-yellow;
+  }
+  .bar.strong {
+    @apply border-green bg-green;
+  }
